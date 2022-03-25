@@ -1,8 +1,7 @@
 package ru.kirill.first_kotlin_project
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import ru.kirill.first_kotlin_project.R
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
