@@ -3,4 +3,9 @@
     <string name="tap_to_button">TAP TO BUTTON</string>
     <string name="button_en">BUTTON</string>
     <string name="button_rus">КНОПКА</string>
+    <string name="set_fields">SET FIELDS</string>
+    <string name="copy_fields">COPY FIELDS</string>
+    <string name="name">NAME</string>
+    <string name="surname">SURNAME</string>
+    <string name="age">AGE</string>
 </resources>
