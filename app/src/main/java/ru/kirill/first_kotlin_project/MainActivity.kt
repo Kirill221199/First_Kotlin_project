@@ -1,6 +1,7 @@
 package ru.kirill.first_kotlin_project
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -9,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    fun myToast(text: String) {
+    private fun myToast(text: String) {
         val testToast: Toast = Toast.makeText(this, text, Toast.LENGTH_SHORT)
         testToast.show()
     }
@@ -43,15 +44,32 @@ class MainActivity : AppCompatActivity() {
 
         })
 
-        val nameCopy:TextView = findViewById(R.id.name_copy)
-        val surnameCopy:TextView = findViewById(R.id.surname_copy)
-        val buttonCopy:Button = findViewById(R.id.button_copy_fields)
+        val nameCopy: TextView = findViewById(R.id.name_copy)
+        val surnameCopy: TextView = findViewById(R.id.surname_copy)
+        val buttonCopy: Button = findViewById(R.id.button_copy_fields)
         buttonCopy.setOnClickListener(View.OnClickListener {
-            val  myCopyClass = myDataClass.copy()
+            val myCopyClass = myDataClass.copy()
             nameCopy.text = myCopyClass.name
             surnameCopy.text = myCopyClass.surname
         })
 
-    }
+        fun logSpace() {
+            Log.d("myLogs", "-----------------------------------------")
+        }
 
+        Log.d("myLogs", Cycles.testIf(6, 7))
+        logSpace()
+        Log.d("myLogs", Cycles.testWhen(5))
+        logSpace()
+        Cycles.testFor()
+        logSpace()
+        Cycles.testForeach()
+        logSpace()
+        Cycles.testRepeat("Hello")
+        logSpace()
+        Cycles.testWhile()
+        logSpace()
+        Cycles.testDoWhile()
+    }
 }
+
